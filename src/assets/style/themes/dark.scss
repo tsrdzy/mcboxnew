@@ -1,0 +1,74 @@
+.xxxxx {
+  color: #409EFF, #337ecc, #79bbff, #c6e2ff, #a0cfff, #d9ecff, #ecf5ff;
+  color: #67C23A, #529b2e, #95d475, #b3e19d, #d1edc4, #e1f3d8, #f0f9eb;
+  color: #E6A23C, #b88230, #eebe77, #f3d19e, #f8e3c5, #faecd8, #fdf6ec;
+  color: #F56C6C, #c45656, #f89898, #fab6b6, #fcd3d3, #fde2e2, #fef0f0;
+  color: #909399, #73767a, #b1b3b8, #c8c9cc, #dedfe0, #e9e9eb, #f4f4f5;
+  color: #000000, #303133, #606266, #909399, #A8ABB2, #C0C4CC, #FFFFFF
+}
+
+$background: #252525;
+$text-color: #ecf5ff;
+$text-color-shadow: #c6e2ff;
+$text-color-hover: #a0cfff;
+$form-color: "#252525";
+$form-color-click: "";
+$form-color-shadow: #c6e2ff;
+$form-color-border: #c6e2ff;
+$form-color-hover: #7979795e;
+$form-color-background-hover:#7c7c7c15;
+body,
+html {
+  background-color: $background;
+}
+
+* {
+  color: $text-color;
+  a {
+    text-decoration: none;
+    transition: all 0.2s;
+    &:link,
+    &:visited {
+      text-shadow: 0 0 1px $text-color-shadow;
+    }
+    &:hover {
+      text-shadow: 0 0 10px $text-color-hover;
+      transition: all 0.2s;
+    }
+  }
+
+  button {
+    color: $form-color;
+    background-color: $background;
+    border: 1px solid $form-color-border;
+    transition: all 0.2s;
+    &:hover{
+      transition: all 0.2s;
+      box-shadow: 0 0 10px $text-color-hover;
+      background-color: $form-color-background-hover;
+    }
+  }
+}
+
+#theme_dark {
+  #header {
+    box-shadow: 0 5px 5px -5px $form-color-hover;
+
+    .header-title {
+      text-shadow: 0 0 10px $text-color-shadow;
+    }
+
+    .header-sets {
+      text-shadow: 0 0 10px $text-color-shadow;
+      transition: all 0.2s;
+
+      &-set:hover {
+        background-color: $form-color-hover;
+        transition: all 0.2s;
+      }
+    }
+  }
+  #home{
+    text-shadow: 0 0 6px $text-color-shadow;
+  }
+}
